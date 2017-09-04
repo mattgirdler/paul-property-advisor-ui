@@ -1,0 +1,12 @@
+{
+  "name": "property-advisor-ui",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andymantell/property-advisor-ui.git"
+  },
+  "author": ""
+}
