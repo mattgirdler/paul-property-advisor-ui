@@ -26,6 +26,8 @@ conversation.message({
 })
 
 app.use('/static', express.static('app/assets/dist'))
+app.use('/images', express.static('app/assets/src/images'))
+app.use('/styles.css', express.static('app/assets/src/styles.css'))
 
 app.get('/', function (req, res) {
   res.sendFile(path.resolve('app/templates/index.html'))
@@ -34,5 +36,5 @@ app.get('/', function (req, res) {
 var port = appEnv.port || 3000
 
 app.listen(port, function () {
-  console.log('Example app listening on port 3000')
+  console.log('Example app listening on port', port)
 })
