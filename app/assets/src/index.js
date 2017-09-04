@@ -1,7 +1,9 @@
 import React from "react";
 import { render } from "react-dom";
 import DevTools from "mobx-react-devtools";
-import { Tabs, Tab, Grid, Row, Col, Navbar, FormGroup, ControlLabel, FormControl } from 'react-bootstrap';
+import { Nav, NavItem, Tabs, Tab, Grid, Row, Col, Navbar, FormGroup, ControlLabel, FormControl } from 'react-bootstrap';
+import Guide from './components/Guide'
+import Traffic from './components/Traffic'
 
 import ChatMessages from "./models/ChatMessages";
 
@@ -18,11 +20,12 @@ const flexRow = {
 }
 
 const flexColumnPrimary = {
-  flexGrow: 3
+  flexGrow: 1
 }
 
 const flexColumnSide = {
-  flexGrow: 1,
+  flexGrow: 0,
+  flexShrink: 0,
   position: 'relative'
 }
 
@@ -30,6 +33,17 @@ const stuckToBottom = {
   position: 'absolute',
   bottom: 0,
   left: 0
+}
+
+const tabsContainerStyle = {
+  position: 'relative'
+}
+
+const tabsStyle = {
+  position: 'absolute',
+  bottom: 0,
+  left: 0,
+  width: '100%'
 }
 
 render(
@@ -47,13 +61,27 @@ render(
     <div style={flexRow}>
       <div style={flexColumnPrimary}>
 
-        <Tabs defaultActiveKey={2} id="main-tabs">
-          <Tab eventKey={1} title="Guide">Tab 1 content</Tab>
-          <Tab eventKey={2} title="Traffic">Tab 2 content</Tab>
-          <Tab eventKey={3} title="Other">Tab 3 content</Tab>
-          <Tab eventKey={4} title="Other">Tab 4 content</Tab>
-        </Tabs>
-
+        <Tab.Container id="main-tabs" defaultActiveKey="traffic">
+          <div>
+            <Nav bsStyle="pills" style={tabsStyle}>
+              <NavItem eventKey="guide">
+                Guide
+              </NavItem>
+              <NavItem eventKey="traffic">
+                Traffic
+              </NavItem>
+            </Nav>
+            
+            <Tab.Content>
+              <Tab.Pane eventKey="guide">
+                <Guide />
+              </Tab.Pane>
+              <Tab.Pane eventKey="traffic">
+                <Traffic />
+              </Tab.Pane>
+            </Tab.Content>
+          </div>
+        </Tab.Container>
       </div>
 
       <div style={flexColumnSide}>
