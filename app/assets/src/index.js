@@ -23,10 +23,14 @@ render(
 
     <Grid>
       <Row className="show-grid">
-        <Col xs={12} md={8}>
+        <Col xs={12} md={3}>
+          Guide
+          List<br />Of<br />Guide<br />Things
+        </Col>
+        <Col xs={12} md={5}>
           <Tabs defaultActiveKey={2} id="main-panel-tabs">
-            <Tab eventKey={1} title="Guide">Guide</Tab>
-            <Tab eventKey={2} title="Traffic lights">Traffic lights</Tab>
+            <Tab eventKey={2} title="Mine shaft details">Mine shaft details</Tab>
+            <Tab eventKey={3} title="Pollution">Pollution</Tab>
           </Tabs>
         </Col>
         <Col xs={6} md={4}>
