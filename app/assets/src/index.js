@@ -11,11 +11,32 @@ const fullHeightStyle = {
   height: '100%'
 }
 
+const flexRow = {
+  display: 'flex',
+  flexWrap: 'wrap',
+  height: '100%'
+}
+
+const flexColumnPrimary = {
+  flexGrow: 3
+}
+
+const flexColumnSide = {
+  flexGrow: 1,
+  position: 'relative'
+}
+
+const stuckToBottom = {
+  position: 'absolute',
+  bottom: 0,
+  left: 0
+}
+
 render(
-  <div>
+  <div className="container-fluid" style={fullHeightStyle}>
     <DevTools />
 
-    <Navbar collapseOnSelect>
+    <Navbar collapseOnSelect fixedTop>
       <Navbar.Header>
         <Navbar.Brand>
           HM Land Registry <strong>Property Advisor</strong>
@@ -23,8 +44,8 @@ render(
       </Navbar.Header>
     </Navbar>
 
-    <div className="row" style={fullHeightStyle}>
-      <div className="col">
+    <div style={flexRow}>
+      <div style={flexColumnPrimary}>
 
         <Tabs defaultActiveKey={2} id="main-tabs">
           <Tab eventKey={1} title="Guide">Tab 1 content</Tab>
@@ -32,12 +53,13 @@ render(
           <Tab eventKey={3} title="Other">Tab 3 content</Tab>
           <Tab eventKey={4} title="Other">Tab 4 content</Tab>
         </Tabs>
-          
+
       </div>
-      <div className="col">
+
+      <div style={flexColumnSide}>
         Chat log<br />Chat log<br />Chat log<br />Chat log<br />Chat log<br />Chat log<br />Chat log<br />Chat log<br />Chat log<br />Chat log<br />Chat log<br />Chat log<br />Chat log<br />Chat log<br />Chat log<br />Chat log<br />Chat log<br />
 
-        <form>
+        <form style={stuckToBottom}>
           <FormGroup controlId="formBasicText">
             <ControlLabel>Type here</ControlLabel>
             <FormControl
