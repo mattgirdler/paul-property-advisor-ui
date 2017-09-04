@@ -3,11 +3,9 @@ import { render } from "react-dom";
 import DevTools from "mobx-react-devtools";
 import { Grid, Row, Col, Navbar, Tabs, Tab, FormGroup, ControlLabel, FormControl } from 'react-bootstrap';
 
-// import TodoList from "./components/TodoList";
-// import TodoListModel from "./models/TodoListModel";
-// import TodoModel from "./models/TodoModel";
+import ChatMessages from "./models/ChatMessages";
 
-// const store = new TodoListModel();
+const store = new ChatMessages();
 
 render(
   <div>
