@@ -3,11 +3,9 @@ import { render } from "react-dom";
 import DevTools from "mobx-react-devtools";
 import { Tabs, Tab, Grid, Row, Col, Navbar, FormGroup, ControlLabel, FormControl } from 'react-bootstrap';
 
-// import TodoList from "./components/TodoList";
-// import TodoListModel from "./models/TodoListModel";
-// import TodoModel from "./models/TodoModel";
+import ChatMessages from "./models/ChatMessages";
 
-// const store = new TodoListModel();
+const store = new ChatMessages();
 
 const fullHeightStyle = {
   height: '100%'

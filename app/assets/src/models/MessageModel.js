@@ -2,10 +2,9 @@ import { observable } from "mobx";
 
 export default class TodoModel {
   id = Math.random();
-  @observable title;
-  @observable finished = false;
-
+  @observable message;
+  
   constructor(title) {
-    this.title = title;
+    this.message = message;
   }
 }
