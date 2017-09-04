@@ -1,7 +1,7 @@
 import React from "react";
 import { render } from "react-dom";
 import DevTools from "mobx-react-devtools";
-import { Grid, Row, Col, Navbar, Tabs, Tab, FormGroup, ControlLabel, FormControl } from 'react-bootstrap';
+import { Tabs, Tab, Grid, Row, Col, Navbar, FormGroup, ControlLabel, FormControl } from 'react-bootstrap';
 
 // import TodoList from "./components/TodoList";
 // import TodoListModel from "./models/TodoListModel";
@@ -9,31 +9,34 @@ import { Grid, Row, Col, Navbar, Tabs, Tab, FormGroup, ControlLabel, FormControl
 
 // const store = new TodoListModel();
 
+const fullHeightStyle = {
+  height: '100%'
+}
+
 render(
   <div>
     <DevTools />
 
-    <Navbar inverse collapseOnSelect>
+    <Navbar collapseOnSelect>
       <Navbar.Header>
         <Navbar.Brand>
-          PAUL
+          HM Land Registry <strong>Property Advisor</strong>
         </Navbar.Brand>
       </Navbar.Header>
     </Navbar>
 
-    <Grid>
-      <Row className="show-grid">
-        <Col xs={12} md={3}>
-          Guide
-          List<br />Of<br />Guide<br />Things
-        </Col>
-        <Col xs={12} md={5}>
-          <Tabs defaultActiveKey={2} id="main-panel-tabs">
-            <Tab eventKey={2} title="Mine shaft details">Mine shaft details</Tab>
-            <Tab eventKey={3} title="Pollution">Pollution</Tab>
-          </Tabs>
-        </Col>
-        <Col xs={6} md={4}>
+    <div className="row" style={fullHeightStyle}>
+      <div className="col">
+
+        <Tabs defaultActiveKey={2} id="main-tabs">
+          <Tab eventKey={1} title="Guide">Tab 1 content</Tab>
+          <Tab eventKey={2} title="Traffic">Tab 2 content</Tab>
+          <Tab eventKey={3} title="Other">Tab 3 content</Tab>
+          <Tab eventKey={4} title="Other">Tab 4 content</Tab>
+        </Tabs>
+          
+      </div>
+      <div className="col">
         Chat log<br />Chat log<br />Chat log<br />Chat log<br />Chat log<br />Chat log<br />Chat log<br />Chat log<br />Chat log<br />Chat log<br />Chat log<br />Chat log<br />Chat log<br />Chat log<br />Chat log<br />Chat log<br />Chat log<br />
 
         <form>
@@ -46,9 +49,8 @@ render(
             />
           </FormGroup>
         </form>
-        </Col>
-      </Row>
-    </Grid>
+        </div>
+      </div>
 
     {/* <TodoList store={store} /> */}
   </div>,
