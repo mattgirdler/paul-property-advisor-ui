@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600|Source+Code+Pro');
+
+$font-stack: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  font-family: $font-stack;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, .header {
+    font-family: $font-stack;
+}
+
+h2 {
+  font-family: $font-stack;
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+input {
+  font-size: 0.9rem;
+
+  &[type="text"] {
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+  }
+
+  &:focus {
+    outline:none;
+  }
+}
+
+button {
+  &:focus {
+    outline:none;
+  }
+
+  &[type="submit"] {
+    height: 49px;
+  }
+
+}
+
+.faux-table__row {
+  .faux-table__cell--shrink-height {
+    .form {
+      margin-bottom: 4rem;
+      margin-left: 2rem;
+    }
+}
+}
+
+
+.panel {
+  p {
+    font-size: 0.9rem;
+    padding-top: 0;
+    padding-bottom: 0.5rem;
+  }
+}
