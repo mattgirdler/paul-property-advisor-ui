@@ -141,7 +141,10 @@ render(
           </TabPane>
 
           <TabPane id="CoalAuthority" tabs={tabs}>
-          <img src="./images/Coal.jpg" alt="Coal Mining Map"/>
+          <img src="./images/Coal.jpg" alt="Coal Mining Map" className="coal-image"/>
+          <p>Within, or within 2 metres of, the boundry of the property there is 1 mine entry, the approximate position of which is shown on the enquiry boundry plot.</p>
+          <p>There is no record of what steps, if any, have taken to treat the mine entry.</p>
+          <p>For an additional fee, the Coal Authority can provide a Mine Entry Interpretive Report.</p>
           </TabPane>
 
           <TabPane id="Crime" tabs={tabs}>
