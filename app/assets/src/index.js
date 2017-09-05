@@ -69,7 +69,7 @@ render(
               <ol>
                 <li>Ask the seller and other nearby residents if flooding has historically occurred in the area.
                   If it has, why did it occur, what was the impact and what areas were affected.</li>
-                </ol>
+              </ol>
               <h3>Insurance</h3>
               <p>Buildings and contents insurance should be available and affordable.
                 However, we recommend you obtain buildings and contents insurance terms before exchange of contracts to confirm this.</p>
@@ -138,12 +138,28 @@ render(
               <p>Not complete</p>
             </div>
           </TabPane>
+          <TabPane id="CoalAuthority" tabs={tabs}>
+            <div className="panel panel--guide panel--success">
+              <h2>Choose your property</h2>
+              <p>21 Cotham Lawn Road, Bristol</p>
+            </div>
+            
+          </TabPane>
+
+          <TabPane id="Crime" tabs={tabs}>
+            <div className="panel panel--guide panel--success">
+              <h2>Choose your property</h2>
+              <p>21 Cotham Lawn Road, Bristol</p>
+            </div>
+            
+          </TabPane>
+
         </div>
 
         <div className="faux-table__cell faux-table__cell--side">
           <div className="scroll-pane">
             <p><small><center>Conversation started 4 Sept, 13:03</center></small></p>
-            <Chat store={store}/>
+            <Chat store={store} />
           </div>
         </div>
       </div>
@@ -153,6 +169,8 @@ render(
           <ul className="tabs">
             <TabNav id="guide" title="Guide" tabs={tabs} />
             <TabNav id="traffic" title="Traffic" tabs={tabs} />
+            <TabNav id="CoalAuthority" title="CoalAuthority" tabs={tabs} />
+            <TabNav id="Crime" title="Crime" tabs={tabs} />
           </ul>
         </div>
         <div className="faux-table__cell faux-table__cell--side faux-table__cell--shrink-height">
