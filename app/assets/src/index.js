@@ -148,7 +148,7 @@ render(
           </TabPane>
 
           <TabPane id="Crime" tabs={tabs}>
-            <h2>Jun 2017 crime and ASB breakdowns and trends for Cotham</h2>
+            <h2>June 2017 crime and ASB breakdowns and trends for Cotham</h2>
 
             <div className="crime-table">
               <table>
