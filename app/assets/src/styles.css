@@ -37,7 +37,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .faux-table__cell {
     display: table-cell;
-    padding: 30px;
 }
 
 .faux-table__cell--main {
@@ -54,8 +53,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .faux-table__cell--bottom {
-    padding-bottom: 0;
-    padding-left: 0;
+    padding: 0;
+}
+
+.send-message__cell {
+    padding: 0 30px;
+}
+
+.send-message__cell form #chat {
+    margin-bottom: 30px;
+}
+
+.chat__cell {
+    vertical-align: top;
 }
 
 /* Header */
@@ -131,7 +141,7 @@ button {
     border-top: 4px solid #3c6df0;
     background-color: #fff;
     box-shadow: 0 0 40px rgba(0,0,0,0.1);
-    margin-left: 100px;
+    margin-left: 70px;
     position: relative;
 }
 
@@ -201,6 +211,7 @@ button {
     padding: 0;
     margin: 0;
 }
+
 .chat__item {
     padding: 20px;
     margin-bottom: 30px;
@@ -235,5 +246,9 @@ button {
 .scroll-pane {
     height: 100%;
     overflow-y: scroll;
-    padding: 0 20px 0 20px;
+    padding: 80px 60px 60px 60px;
+}
+
+.chat-scroll-pane {
+    padding: 30px;
 }

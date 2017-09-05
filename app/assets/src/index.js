@@ -144,7 +144,7 @@ render(
              <img src="./images/Capture.PNG" alt="Coal Mining Map" height="640" width="480"/>
              
             </div>
-            
+
           </TabPane>
 
           <TabPane id="Crime" tabs={tabs}>
@@ -152,12 +152,12 @@ render(
               <h2>Choose your property</h2>
               <p>21 Cotham Lawn Road, Bristol</p>
             </div>
-            
+
           </TabPane>
 
         </div>
 
-        <div className="faux-table__cell faux-table__cell--side">
+        <div className="faux-table__cell faux-table__cell--side chat__cell">
           <Chat store={store}/>
         </div>
       </div>
@@ -166,12 +166,12 @@ render(
         <div className="faux-table__cell faux-table__cell--main faux-table__cell--shrink-height faux-table__cell--bottom">
           <ul className="tabs">
             <TabNav id="guide" title="Guide" tabs={tabs} />
-            <TabNav id="traffic" title="Traffic" tabs={tabs} />
-            <TabNav id="CoalAuthority" title="Coal Authority" tabs={tabs} />
+            <TabNav id="traffic" title="Risk" tabs={tabs} />
+            <TabNav id="CoalAuthority" title="CoalAuthority" tabs={tabs} />
             <TabNav id="Crime" title="Crime" tabs={tabs} />
           </ul>
         </div>
-        <div className="faux-table__cell faux-table__cell--side faux-table__cell--shrink-height">
+        <div className="faux-table__cell faux-table__cell--side faux-table__cell--shrink-height send-message__cell">
           <ChatForm store={store} />
         </div>
       </div>
