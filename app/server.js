@@ -21,6 +21,7 @@ var conversation = new ConversationV1({
 })
 
 app.post('/api/question', function(req, res) {
+  console.log(req)
   conversation.message({
     input: { text: req.body.question },
     workspace_id: '26a6e7d0-4127-4be4-bf44-2355001a6a38',

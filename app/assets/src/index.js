@@ -6,6 +6,7 @@ import Traffic from './components/Traffic'
 
 import Chat from './components/Chat';
 import Conversation from "./models/Conversation";
+import ChatForm from './components/ChatForm';
 
 import TabNav from './components/TabNav'
 import TabPane from './components/TabPane'
@@ -157,10 +158,7 @@ render(
         </div>
 
         <div className="faux-table__cell faux-table__cell--side">
-          <div className="scroll-pane">
-            <p><small><center>Conversation started 4 Sept, 13:03</center></small></p>
-            <Chat store={store} />
-          </div>
+          <Chat store={store}/>
         </div>
       </div>
 
@@ -174,11 +172,7 @@ render(
           </ul>
         </div>
         <div className="faux-table__cell faux-table__cell--side faux-table__cell--shrink-height">
-          <form>
-            <label htmlFor="chat" className="visuallyhidden">Start your chat here</label>
-            <input type="text" name="chat" id="chat" placeholder="Type something&hellip;" />
-            <button>Send</button>
-          </form>
+          <ChatForm store={store} />
         </div>
       </div>
     </div>

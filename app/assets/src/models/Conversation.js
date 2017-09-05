@@ -1,7 +1,8 @@
 import { observable, computed, action } from "mobx";
+import MessageModel from './MessageModel'
 
-export default class ChatMessages {
-  @observable messages = [{message:"XXXXXXXXXX", bot: true},{message:"YYYYYYYYYYYYYYY", bot: false}];
+export default class Conversation {
+  @observable messages = [];
 
   @action
   addMessage(message, bot) {
