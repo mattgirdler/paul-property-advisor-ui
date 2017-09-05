@@ -205,6 +205,26 @@ button {
     border-top-color: darkred;
 }
 
+.panel h2 {
+    margin-top: 0;
+}
+
+.panel h2 a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.panel--collapsible .panel__contents {
+    max-height: 0;
+    transition: max-height 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.panel--active .panel__contents {
+    max-height: 1000px;
+}
+
 /* Chat items */
 .chat {
     list-style: none;
