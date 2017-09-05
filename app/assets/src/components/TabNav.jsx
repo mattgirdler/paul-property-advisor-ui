@@ -13,7 +13,11 @@ class TabNav extends React.Component {
     
     
     render() {
-        const { title, id, children } = this.props;
+        const { title, id, children, visible } = this.props;
+
+        var style = {
+            display: this.tabs.isTabEnabled(id) ? 'block' : 'none'
+        }
 
         var classes = 'tabs__link'
         if (this.tabs.activeTab === id) {
@@ -21,7 +25,7 @@ class TabNav extends React.Component {
         }
 
         return (
-            <li className="tabs__item">
+            <li className="tabs__item" style={style}>
               <a className={classes} href="#id" onClick={this.handleClick}>{title}</a>
             </li>
         )

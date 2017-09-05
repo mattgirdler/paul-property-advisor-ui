@@ -10,6 +10,7 @@ class ChatForm extends React.Component {
         super(props)
         this.handleSubmit = this.handleSubmit.bind(this);
         this.store = props.store
+        this.tabs = props.tabs
     }
 
     render() {
@@ -47,6 +48,10 @@ class ChatForm extends React.Component {
         })
         .then(function(data) {
             this.store.addMessage(data.output.text[0], true)
+
+            if(data.output.tab) {
+                this.tabs.setActiveTab(data.output.tab)
+            }
         }.bind(this))
 
         this.inputValue = '';

@@ -139,6 +139,14 @@ render(
               <p>Not complete</p>
             </div>
           </TabPane>
+
+          <TabPane id="foo" tabs={tabs}>
+            Another tab
+          </TabPane>
+
+          <TabPane id="bar" tabs={tabs}>
+            A fourth tab
+          </TabPane>
         </div>
 
         <div className="faux-table__cell faux-table__cell--side">
@@ -154,7 +162,7 @@ render(
           </ul>
         </div>
         <div className="faux-table__cell faux-table__cell--side faux-table__cell--shrink-height">
-          <ChatForm store={store} />
+          <ChatForm store={store} tabs={tabs} />
         </div>
       </div>
     </div>
