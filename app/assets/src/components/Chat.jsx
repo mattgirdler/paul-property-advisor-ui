@@ -11,8 +11,8 @@ class Chat extends React.Component {
   render() {
     return (
         <ul className="Chat">
-          {this.props.store.messages.forEach(m => (
-            <Message message={m} key={Math.random()} />
+          {this.props.store.messages.map(m => (
+            <Message message={m}/>
           ))}
         </ul>
     );
