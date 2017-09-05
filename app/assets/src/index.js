@@ -44,7 +44,7 @@ render(
                   advises that homes in affected areas should be tested. For further information
                   please contact Public Health England or go to <a href="www.ukradon.org">UK Radon</a>.</p>
             </Panel>
-            
+
 
             <Panel title="Deed" level="warning">
               <p>The land in this title is subject to a perpetual yearly rentcharge of £12.12.
@@ -60,7 +60,7 @@ render(
               <p>You are prohibited from displaying your washing in a lewd and lascivious manner.</p>
             </Panel>
 
-            <Panel title="Flood" level="incomplete">
+            <Panel title="Flood" level="warning">
               <h3>Professional Opinion</h3>
               <p>Landmark Information Group have identified the property to be within an area that is at minimal or no risk of flooding.</p>
               <p>The homebuyer may wish to investigate any additional flood risks to the property highlighted on the flood gauges using the online viewer.</p>
