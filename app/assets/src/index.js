@@ -70,7 +70,7 @@ render(
               <ol>
                 <li>Ask the seller and other nearby residents if flooding has historically occurred in the area.
                   If it has, why did it occur, what was the impact and what areas were affected.</li>
-                </ol>
+              </ol>
               <h3>Insurance</h3>
               <p>Buildings and contents insurance should be available and affordable.
                 However, we recommend you obtain buildings and contents insurance terms before exchange of contracts to confirm this.</p>
@@ -140,16 +140,25 @@ render(
             </div>
           </TabPane>
 
-          <TabPane id="foo" tabs={tabs}>
-            Another tab
+          <TabPane id="CoalAuthority" tabs={tabs}>
+            <div className="panel panel--guide panel--success">
+             <img src="./images/Capture.PNG" alt="Coal Mining Map" height="640" width="480"/>
+             
+            </div>
+
           </TabPane>
 
-          <TabPane id="bar" tabs={tabs}>
-            A fourth tab
+          <TabPane id="Crime" tabs={tabs}>
+            <div className="panel panel--guide panel--success">
+              <h2>Choose your property</h2>
+              <p>21 Cotham Lawn Road, Bristol</p>
+            </div>
+
           </TabPane>
+
         </div>
 
-        <div className="faux-table__cell faux-table__cell--side">
+        <div className="faux-table__cell faux-table__cell--side chat__cell">
           <Chat store={store}/>
         </div>
       </div>
@@ -158,10 +167,12 @@ render(
         <div className="faux-table__cell faux-table__cell--main faux-table__cell--shrink-height faux-table__cell--bottom">
           <ul className="tabs">
             <TabNav id="guide" title="Guide" tabs={tabs} />
-            <TabNav id="traffic" title="Traffic" tabs={tabs} />
+            <TabNav id="traffic" title="Risk" tabs={tabs} />
+            <TabNav id="CoalAuthority" title="CoalAuthority" tabs={tabs} />
+            <TabNav id="Crime" title="Crime" tabs={tabs} />
           </ul>
         </div>
-        <div className="faux-table__cell faux-table__cell--side faux-table__cell--shrink-height">
+        <div className="faux-table__cell faux-table__cell--side faux-table__cell--shrink-height send-message__cell">
           <ChatForm store={store} tabs={tabs} />
         </div>
       </div>
