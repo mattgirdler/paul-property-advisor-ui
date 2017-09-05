@@ -141,8 +141,8 @@ render(
           </TabPane>
           <TabPane id="CoalAuthority" tabs={tabs}>
             <div className="panel panel--guide panel--success">
-              <h2>Choose your property</h2>
-              <p>21 Cotham Lawn Road, Bristol</p>
+             <img src="./images/Capture.PNG" alt="Coal Mining Map" height="640" width="480"/>
+             
             </div>
             
           </TabPane>
@@ -167,7 +167,7 @@ render(
           <ul className="tabs">
             <TabNav id="guide" title="Guide" tabs={tabs} />
             <TabNav id="traffic" title="Traffic" tabs={tabs} />
-            <TabNav id="CoalAuthority" title="CoalAuthority" tabs={tabs} />
+            <TabNav id="CoalAuthority" title="Coal Authority" tabs={tabs} />
             <TabNav id="Crime" title="Crime" tabs={tabs} />
           </ul>
         </div>
