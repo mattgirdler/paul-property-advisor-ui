@@ -1,8 +1,8 @@
 import { observable, computed, action } from "mobx";
 
 export default class Tabs {
-  @observable activeTab = '';
-  @observable visibleTabs = [];
+  @observable activeTab = 'guide';
+  @observable visibleTabs = ['guide', 'traffic', 'Crime', 'CoalAuthority'];
 
   @action
   setActiveTab(id) {
