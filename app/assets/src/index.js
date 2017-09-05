@@ -145,9 +145,51 @@ render(
           </TabPane>
 
           <TabPane id="Crime" tabs={tabs}>
-         
-          </TabPane>
+            <h2>Jun 2017 crime and ASB breakdowns and trends for Cotham</h2>
 
+            <div className="crime-table">
+              <table>
+                <tr>
+                  <th>ASB</th>
+                  <th>Burglary</th>
+                  <th>Robbery</th>
+                  <th>Vehicle</th>
+                  <th>Violent</th>
+                  <th>Shoplifting</th>
+                  <th>CD&A</th>
+                  <th>Other Theft</th>
+                  <th>Drugs</th>
+                  <th>Bike Theft</th>
+                  <th>Theft From Person</th>
+                  <th>Weapons</th>
+                  <th>Public Order</th>
+                  <th>Other</th>
+                  <th>Total</th>
+                </tr>
+                <tr>
+                  <td>24</td>
+                  <td>6</td>
+                  <td>0</td>
+                  <td>15</td>
+                  <td>13</td>
+                  <td>9</td>
+                  <td>7</td>
+                  <td>18</td>
+                  <td>1</td>
+                  <td>3</td>
+                  <td>0</td>
+                  <td>1</td>
+                  <td>5</td>
+                  <td>0</td>
+                  <td>102</td>
+                </tr>
+              </table>
+            </div>
+
+            <div className="crime-map">
+              <img src="/images/crime-stats.png" />
+            </div>
+          </TabPane>
         </div>
 
         <div className="faux-table__cell faux-table__cell--side chat__cell">

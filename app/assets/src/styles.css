@@ -252,3 +252,35 @@ button {
 .chat-scroll-pane {
     padding: 30px;
 }
+
+/* Crime */
+.crime-map, .crime-table {
+    display: flex;
+    justify-content: center;
+}
+
+.crime-map img {
+    border: 1px solid #e8e8e8;
+    margin-top: 60px;
+    padding: 40px;
+    background: white;
+}
+
+.crime-table table {
+    margin: 40px 0 20px;
+    border: 1px solid #e8e8e8;
+    background: white;
+}
+
+.crime-table table tr {
+    height: 50px;
+}
+
+.crime-table table tr th {
+    padding: 10px;
+    text-align: center;
+}
+
+.crime-table table tr td {
+    text-align: center;
+}
