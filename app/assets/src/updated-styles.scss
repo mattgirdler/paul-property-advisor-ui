@@ -9,7 +9,7 @@ html {
   font-family: $font-stack;
 }
 
-h1, h2, h3, h4, h5, h6, p, a, .header {
+h1, h2, h3, h4, h5, h6, p, a, .header, ol, li {
     font-family: $font-stack;
 }
 
@@ -17,6 +17,10 @@ h2 {
   font-family: $font-stack;
   font-size: 1.6rem;
   font-weight: 300;
+}
+
+ol {
+  font-size: 0.9rem;
 }
 
 input {
@@ -59,8 +63,44 @@ button {
 
 
 .panel {
-      padding-top: 1rem;
+      padding-top: 2rem;
       padding-left: 3rem;
+
+
+&.panel--collapsible {
+    padding-top: 1.5rem;
+
+    h2 {
+      a::before {
+        content: "+";
+        font-weight: 600;
+        padding-right: 1rem;
+        margin-left: -1rem;
+        color: lightgrey;
+      }
+
+    }
+
+    &:hover {
+      background-color: #F6F6F6;
+    }
+
+    &.panel--active {
+      &:hover {
+        background-color: white;
+      }
+      h2 {
+      a::before {
+        content: "–";
+        font-weight: 600;
+        padding-right: 1rem;
+        margin-left: -1rem;
+        color: lightgrey;
+      }
+    }
+    }
+
+}
 
   p {
     font-size: 0.9rem;

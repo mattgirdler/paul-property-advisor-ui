@@ -1,7 +1,7 @@
 import React from "react";
 import { render } from "react-dom";
 import DevTools from "mobx-react-devtools";
-import Guide from './components/Guide'
+import GuidePane from './components/GuidePane'
 import Traffic from './components/Traffic'
 import Panel from './components/Panel'
 
@@ -13,9 +13,11 @@ import TabNav from './components/TabNav'
 import TabPane from './components/TabPane'
 
 import Tabs from "./models/Tabs";
+import Guide from './models/Guide';
 
 const store = new Conversation();
 const tabs = new Tabs();
+const guide = new Guide();
 
 render(
   <div className="wrapper">
@@ -26,6 +28,11 @@ render(
     <div className="faux-table">
       <div className="faux-table__row">
         <div className="faux-table__cell faux-table__cell--main">
+          <div className="panel__empty">
+            <h1>Welcome</h1>
+
+            <p>Try saying "Hello" to Paul in the chat window.</p>
+          </div>
 
           <TabPane id="traffic" tabs={tabs}>
             <Panel title="Ground Hazards" level="warning">
@@ -39,7 +46,7 @@ render(
                   advises that homes in affected areas should be tested. For further information
                   please contact Public Health England or go to <a href="www.ukradon.org">UK Radon</a>.</p>
             </Panel>
-            
+
 
             <Panel title="Deed" level="warning">
               <p>The land in this title is subject to a perpetual yearly rentcharge of £12.12.
@@ -55,7 +62,7 @@ render(
               <p>You are prohibited from displaying your washing in a lewd and lascivious manner.</p>
             </Panel>
 
-            <Panel title="Flood" level="incomplete">
+            <Panel title="Flood" level="warning">
               <h3>Professional Opinion</h3>
               <p>Landmark Information Group have identified the property to be within an area that is at minimal or no risk of flooding.</p>
               <p>The homebuyer may wish to investigate any additional flood risks to the property highlighted on the flood gauges using the online viewer.</p>
@@ -100,7 +107,10 @@ render(
               <p>For further information or help, please contact your professional adviser or Landmark Customer Services on 0844 844 9966.</p>
             </Panel>
           </TabPane>
-          <TabPane id="guide" tabs={tabs}>
+          
+          <GuidePane tabs={tabs} guide={guide}/>
+
+          {/* <TabPane id="guide" tabs={tabs}>
             <div className="panel panel--complete">
               <h2>Choose your property</h2>
               <p>21 Cotham Lawn Road, Bristol</p>
@@ -130,7 +140,7 @@ render(
               <h2>Move In</h2>
               <p>Not complete</p>
             </div>
-          </TabPane>
+          </TabPane> */}
 
           <TabPane id="CoalAuthority" tabs={tabs}>
           <div className="coal-container">
@@ -192,7 +202,7 @@ render(
         </div>
 
         <div className="faux-table__cell faux-table__cell--side chat__cell">
-          <Chat store={store}/>
+          <Chat store={store} />
         </div>
       </div>
 
