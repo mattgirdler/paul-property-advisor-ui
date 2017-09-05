@@ -297,3 +297,9 @@ button {
     height: 600px;
 }
 
+.coal-container {
+    border-top: 4px solid #3c6df0;
+    background-color: #fff;
+    box-shadow: 0 0 40px rgba(0,0,0,0.1);
+}
+
