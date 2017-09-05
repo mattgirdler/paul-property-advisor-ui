@@ -39,6 +39,7 @@ app.post('/api/question', function(req, res) {
 app.use('/static', express.static('app/assets/dist'))
 app.use('/images', express.static('app/assets/src/images'))
 app.use('/styles.css', express.static('app/assets/src/styles.css'))
+app.use('/updated-styles.min.css', express.static('app/assets/src/updated-styles.min.css'))
 
 app.get('/', function (req, res) {
   res.sendFile(path.resolve('app/templates/index.html'))
