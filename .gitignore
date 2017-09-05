@@ -2,3 +2,4 @@ node_modules
 npm-debug.log
 .DS_Store
 app/assets/dist
+app/config.json
