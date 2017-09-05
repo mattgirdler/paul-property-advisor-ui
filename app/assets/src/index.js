@@ -62,7 +62,7 @@ render(
               <p>You are prohibited from displaying your washing in a lewd and lascivious manner.</p>
             </Panel>
 
-            <Panel title="Flood" level="warning">
+            <Panel title="Flood" level="incomplete">
               <h3>Professional Opinion</h3>
               <p>Landmark Information Group have identified the property to be within an area that is at minimal or no risk of flooding.</p>
               <p>The homebuyer may wish to investigate any additional flood risks to the property highlighted on the flood gauges using the online viewer.</p>
@@ -82,7 +82,7 @@ render(
                 'Know Your Flood Risk Website <a href="www.knowyourfloodrisk.co.uk/sites/default/files/FloodGuide_ForHomeowners.pdf">here</a>.</p>
             </Panel>
 
-            <Panel title="Contaminated Land" level="warning">
+            <Panel title="Contaminated Land" level="incomplete">
               <p>Landmark Information Group consider it unlikely that the property would be designated "contaminated land"
                 within the meaning of Part 2A of the Environmental Protection Act 1990.
                 Therefore, there should be no adverse effect on the security of the property for normal lending purposes.
@@ -107,7 +107,7 @@ render(
               <p>For further information or help, please contact your professional adviser or Landmark Customer Services on 0844 844 9966.</p>
             </Panel>
           </TabPane>
-          
+
           <GuidePane tabs={tabs} guide={guide}/>
 
           {/* <TabPane id="guide" tabs={tabs}>
@@ -152,9 +152,9 @@ render(
           </TabPane>
 
           <TabPane id="Crime" tabs={tabs}>
-            <h2>June 2017 crime and ASB breakdowns and trends for Cotham</h2>
-
             <div className="crime-table">
+              <h2>June 2017 crime and ASB breakdowns and trends for Cotham</h2>
+
               <table>
                 <tbody>
                   <tr>
