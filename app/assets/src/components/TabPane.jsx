@@ -12,7 +12,7 @@ class TabPane extends React.Component {
         }
 
         return (
-            <div style={style} id={id}>
+            <div className="scroll-pane" style={style} id={id}>
                 {children}
             </div>
         )

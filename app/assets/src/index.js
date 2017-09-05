@@ -26,31 +26,29 @@ render(
           RAWRAWR
           </TabPane>
           <TabPane id="guide" tabs={tabs}>
-            <div className="scroll-pane">
-              <div className="panel panel--complete">
-                <h2>Choose your property</h2>
-                <p>Flag 5, Little Mountains Road, Bristol</p>
-              </div>
+            <div className="panel panel--complete">
+              <h2>Choose your property</h2>
+              <p>Flag 5, Little Mountains Road, Bristol</p>
+            </div>
 
-              <div className="panel panel--complete">
-                <h2>Choose your property</h2>
-                <p>Flag 5, Little Mountains Road, Bristol</p>
-              </div>
+            <div className="panel panel--complete">
+              <h2>Choose your property</h2>
+              <p>Flag 5, Little Mountains Road, Bristol</p>
+            </div>
 
-              <div className="panel panel--complete">
-                <h2>Choose your property</h2>
-                <p>Flag 5, Little Mountains Road, Bristol</p>
-              </div>
+            <div className="panel panel--complete">
+              <h2>Choose your property</h2>
+              <p>Flag 5, Little Mountains Road, Bristol</p>
+            </div>
 
-              <div className="panel panel--incomplete">
-                <h2>Choose your property</h2>
-                <p>Flag 5, Little Mountains Road, Bristol</p>
-              </div>
+            <div className="panel panel--incomplete">
+              <h2>Choose your property</h2>
+              <p>Flag 5, Little Mountains Road, Bristol</p>
+            </div>
 
-              <div className="panel panel--warning">
-                <h2>Choose your property</h2>
-                <p>Flag 5, Little Mountains Road, Bristol</p>
-              </div>
+            <div className="panel panel--warning">
+              <h2>Choose your property</h2>
+              <p>Flag 5, Little Mountains Road, Bristol</p>
             </div>
           </TabPane>
         </div>
