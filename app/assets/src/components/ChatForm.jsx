@@ -15,9 +15,9 @@ class ChatForm extends React.Component {
 
     render() {
         return (
-            <form onSubmit={this.handleSubmit}>
+            <form onSubmit={this.handleSubmit} ref="form">
                 <label htmlFor="chat" className="visuallyhidden">Start your chat here</label>
-                <input type="text" name="chat" id="chat" placeholder="Type something&hellip;" onChange={this.handleInputChange} value={this.inputValue} />
+                <input autoComplete="off" type="text" name="chat" id="chat" placeholder="Type something&hellip;" onChange={this.handleInputChange} value={this.inputValue} />
                 <button type="submit">Send</button>
             </form>
         )
@@ -32,6 +32,7 @@ class ChatForm extends React.Component {
         e.preventDefault()
 
         this.store.addMessage(this.inputValue, false)
+        this.refs.form.classList.add('loading')
 
         fetch('/api/question', {
             headers: {
@@ -48,6 +49,8 @@ class ChatForm extends React.Component {
         })
         .then(function(data) {
             this.store.addMessage(data.output.text[0], true)
+
+            this.refs.form.classList.remove('loading')
 
             if(data.output.tab) {
                 this.tabs.setActiveTab(data.output.tab)

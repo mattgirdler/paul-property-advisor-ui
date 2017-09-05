@@ -40,12 +40,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .faux-table__cell--main {
-    width: 75%;
+    width: 66%;
     background: #f5f5f5;
 }
 
 .faux-table__cell--side {
-    width: 25%
+    width: 33%
 }
 
 .faux-table__cell--shrink-height {
@@ -101,6 +101,24 @@ button {
     overflow: hidden;
     background: #fff url(/images/button-arrow.png) no-repeat center center;
     cursor: pointer;
+}
+
+form {
+    position: relative;
+}
+
+form.loading:before {
+    background: #fff url(/images/ajax-loader.gif) no-repeat center 10px;
+    box-shadow: 0 0 20px #fff;
+    content: 'Paul is typing...';
+    position: absolute;
+    top: -60px;
+    left: 0;
+    display: block;
+    background-color: #fff;
+    padding: 30px 10px 10px 10px;
+    width: 100%;
+    text-align: center;
 }
 
 /* Tabs */
