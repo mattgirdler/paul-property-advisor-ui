@@ -8,8 +8,8 @@ const ConversationV1 = require('watson-developer-cloud/conversation/v1')
 var appEnv = cfenv.getAppEnv()
 
 var conversation = new ConversationV1({
-  username: '<USERNAME>',
-  password: '<PASSWORD>',
+  username: 'a670affb-7c3d-4c7f-b9cc-d83d430673d6',
+  password: 'LXxVSN4uPNOZ',
   version_date: ConversationV1.VERSION_DATE_2017_05_26
 })
 

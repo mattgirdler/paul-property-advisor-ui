@@ -3,10 +3,12 @@ import { render } from "react-dom";
 import DevTools from "mobx-react-devtools";
 import Guide from './components/Guide'
 import Traffic from './components/Traffic'
+import Chat from './components/Chat';
 
-import ChatMessages from "./models/ChatMessages";
+import Conversation from "./models/Conversation";
 
-const store = new ChatMessages();
+
+const store = new Conversation();
 
 render(
   <div className="wrapper">
@@ -48,16 +50,7 @@ render(
         <div className="faux-table__cell faux-table__cell--side">
           <div className="scroll-pane">
             <p><small><center>Conversation started 4 Sept, 13:03</center></small></p>
-            <ul className="chat">
-              <li className="chat__item chat__item--bot">Lorem ipsum dolor sit amet consectetur adipsicing elit. Lorem ipsum dolor sit amet consectetur adipsicing elit. Lorem ipsum dolor sit amet consectetur adipsicing elit.</li>
-              <li className="chat__item">Lorem ipsum dolor sit amet consectetur adipsicing elit. Lorem ipsum dolor sit amet consectetur adipsicing elit. Lorem ipsum dolor sit amet consectetur adipsicing elit.</li>
-              <li className="chat__item chat__item--bot">Lorem ipsum dolor sit amet consectetur adipsicing elit. Lorem ipsum dolor sit amet consectetur adipsicing elit. Lorem ipsum dolor sit amet consectetur adipsicing elit.</li>
-              <li className="chat__item">Lorem ipsum dolor sit amet consectetur adipsicing elit. Lorem ipsum dolor sit amet consectetur adipsicing elit. Lorem ipsum dolor sit amet consectetur adipsicing elit.</li>
-              <li className="chat__item chat__item--bot">Lorem ipsum dolor sit amet consectetur adipsicing elit. Lorem ipsum dolor sit amet consectetur adipsicing elit. Lorem ipsum dolor sit amet consectetur adipsicing elit.</li>
-              <li className="chat__item">Lorem ipsum dolor sit amet consectetur adipsicing elit. Lorem ipsum dolor sit amet consectetur adipsicing elit. Lorem ipsum dolor sit amet consectetur adipsicing elit.</li>
-              <li className="chat__item chat__item--bot">Lorem ipsum dolor sit amet consectetur adipsicing elit. Lorem ipsum dolor sit amet consectetur adipsicing elit. Lorem ipsum dolor sit amet consectetur adipsicing elit.</li>
-              <li className="chat__item">Lorem ipsum dolor sit amet consectetur adipsicing elit. Lorem ipsum dolor sit amet consectetur adipsicing elit. Lorem ipsum dolor sit amet consectetur adipsicing elit.</li>
-            </ul>
+            <Chat store={store}/>
           </div>
         </div>
       </div>
@@ -94,14 +87,4 @@ render(
   document.getElementById("root")
 );
 
-
-// store.addTodo("Get Coffee");
-// store.addTodo("Write simpler code");
-// store.todos[0].finished = true;
-
-// setTimeout(() => {
-//   store.addTodo("Get a cookie as well");
-// }, 2000);
-
-// playing around in the console
-// window.store = store;
+window.store = store;

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { observable, action } from "mobx";
 import { observer } from "mobx-react";
 
-import Message from 'Message';
+import Message from './Message';
 
 @observer
 class Chat extends React.Component {
@@ -10,23 +10,11 @@ class Chat extends React.Component {
 
   render() {
     return (
-      <div>
-        <form onSubmit={this.handleFormSubmit}>
-          Chat:
-          <input
-            type="text"
-            value={this.newMessage}
-            onChange={this.handleMessage}
-          />
-          <button type="submit">Send</button>
-        </form>
-        <hr />
-        <ul>
-          {this.props.store.messages.map(message => (
-            <Message message={message} key={message.id} />
+        <ul className="Chat">
+          {this.props.store.messages.forEach(m => (
+            <Message message={m} key={Math.random()} />
           ))}
         </ul>
-      </div>
     );
   }
 
@@ -37,7 +25,7 @@ class Chat extends React.Component {
 
   @action
   handleFormSubmit = e => {
-    this.props.store.addMessage(this.newMessagee);
+    this.props.store.addMessage(this.newMessage, false);
     this.newMessage = "";
     e.preventDefault();
   };
