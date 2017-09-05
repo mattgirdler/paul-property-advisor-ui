@@ -26,6 +26,11 @@ render(
     <div className="faux-table">
       <div className="faux-table__row">
         <div className="faux-table__cell faux-table__cell--main">
+          <div className="panel__empty">
+            <h1>Welcome</h1>
+
+            <p>Try saying "Hello" to Paul in the chat window.</p>
+          </div>
 
           <TabPane id="traffic" tabs={tabs}>
             <Panel title="Ground Hazards" level="warning">
