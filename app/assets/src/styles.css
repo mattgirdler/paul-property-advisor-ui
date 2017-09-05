@@ -166,6 +166,14 @@ button {
     z-index: 2;
 }
 
+.panel--guide {
+    margin-left: 0;
+}
+
+.panel--guide::after {
+    display: none;
+}
+
 .panel--complete::after {
     content: '✓';
     border-color: #3c6df0;
@@ -173,6 +181,10 @@ button {
 
 .panel:first-of-type::before {
     display: none;
+}
+
+.panel--success {
+    border-top-color: green;
 }
 
 .panel--incomplete {
