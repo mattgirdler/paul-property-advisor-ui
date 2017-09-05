@@ -11,6 +11,7 @@ class ChatForm extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
         this.store = props.store
         this.tabs = props.tabs
+        this.guide = props.guide
 
         window.speechSynthesis.onvoiceschanged = () => {
             var synth = window.speechSynthesis;
@@ -65,6 +66,10 @@ class ChatForm extends React.Component {
 
             if(data.output.tab) {
                 this.tabs.setActiveTab(data.output.tab)
+            }
+
+            if (data.output.update) {
+                this.guide.updateStep(data.output.update.key, data.output.update.value, data.output.update.status)
             }
         }.bind(this))
 

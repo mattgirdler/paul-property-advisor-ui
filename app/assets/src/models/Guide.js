@@ -3,7 +3,7 @@ import Step from './Step'
 
 export default class Conversation {
   @observable steps = [
-    {key: "choose", title:"Choose your property", text:"21 Cotham Lawn Road, Bristol", status:"complete"},
+    {key: "property", title:"Choose your property", text:"", status:"incomplete"},
     {key: "offer", title:"Make an offer", text:"Not complete", status:"incomplete"},
     {key: "insure", title:"Insure property", text:"Not complete", status:"incomplete"},
     {key: "mortgage", title:"Instant mortgage", text:"Not complete", status:"incomplete"},
@@ -17,6 +17,12 @@ export default class Conversation {
   }
 
   @action
-  updateStep(key, title, text, status) {
+  updateStep(key, text, status) {
+    const stepToUpdate = this.steps.forEach((item) => {
+      if(item.key === key) {
+        item.text = text
+        item.status = status
+      }
+    })
   }
 }

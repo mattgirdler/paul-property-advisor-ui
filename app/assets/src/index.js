@@ -216,7 +216,7 @@ render(
           </ul>
         </div>
         <div className="faux-table__cell faux-table__cell--side faux-table__cell--shrink-height send-message__cell">
-          <ChatForm store={store} tabs={tabs} />
+          <ChatForm store={store} tabs={tabs} guide={guide} />
         </div>
       </div>
     </div>
