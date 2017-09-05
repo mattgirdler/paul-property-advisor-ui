@@ -198,11 +198,11 @@ button {
 }
 
 .panel--incomplete {
-    border-top-color: orange;
+    border-top-color: #FFB000;
 }
 
 .panel--warning {
-    border-top-color: darkred;
+    border-top-color: #FF5C49;
 }
 
 .panel h2 {
@@ -217,12 +217,13 @@ button {
 
 .panel--collapsible .panel__contents {
     max-height: 0;
-    transition: max-height 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     overflow: hidden;
+    margin-left: 1rem;
 }
 
 .panel--active .panel__contents {
-    max-height: 1000px;
+    max-height: 600px;
 }
 
 /* Chat items */
@@ -322,4 +323,3 @@ button {
     background-color: #fff;
     box-shadow: 0 0 40px rgba(0,0,0,0.1);
 }
-
