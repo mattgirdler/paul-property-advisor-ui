@@ -140,19 +140,11 @@ render(
             </div>
           </TabPane>
           <TabPane id="CoalAuthority" tabs={tabs}>
-            <div className="panel panel--guide panel--success">
-             <img src="./images/Capture.PNG" alt="Coal Mining Map" height="640" width="480"/>
-             
-            </div>
-
+          <img src="./images/Coal.jpg" alt="Coal Mining Map"/>
           </TabPane>
 
           <TabPane id="Crime" tabs={tabs}>
-            <div className="panel panel--guide panel--success">
-              <h2>Choose your property</h2>
-              <p>21 Cotham Lawn Road, Bristol</p>
-            </div>
-
+         
           </TabPane>
 
         </div>
