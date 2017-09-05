@@ -133,51 +133,55 @@ render(
           </TabPane>
 
           <TabPane id="CoalAuthority" tabs={tabs}>
+          <div className="coal-container">
           <img src="./images/Coal.jpg" alt="Coal Mining Map" className="coal-image"/>
           <p>Within, or within 2 metres of, the boundry of the property there is 1 mine entry, the approximate position of which is shown on the enquiry boundry plot.</p>
           <p>There is no record of what steps, if any, have taken to treat the mine entry.</p>
           <p>For an additional fee, the Coal Authority can provide a Mine Entry Interpretive Report.</p>
+          </div>
           </TabPane>
 
           <TabPane id="Crime" tabs={tabs}>
-            <h2>Jun 2017 crime and ASB breakdowns and trends for Cotham</h2>
+            <h2>June 2017 crime and ASB breakdowns and trends for Cotham</h2>
 
             <div className="crime-table">
               <table>
-                <tr>
-                  <th>ASB</th>
-                  <th>Burglary</th>
-                  <th>Robbery</th>
-                  <th>Vehicle</th>
-                  <th>Violent</th>
-                  <th>Shoplifting</th>
-                  <th>CD&A</th>
-                  <th>Other Theft</th>
-                  <th>Drugs</th>
-                  <th>Bike Theft</th>
-                  <th>Theft From Person</th>
-                  <th>Weapons</th>
-                  <th>Public Order</th>
-                  <th>Other</th>
-                  <th>Total</th>
-                </tr>
-                <tr>
-                  <td>24</td>
-                  <td>6</td>
-                  <td>0</td>
-                  <td>15</td>
-                  <td>13</td>
-                  <td>9</td>
-                  <td>7</td>
-                  <td>18</td>
-                  <td>1</td>
-                  <td>3</td>
-                  <td>0</td>
-                  <td>1</td>
-                  <td>5</td>
-                  <td>0</td>
-                  <td>102</td>
-                </tr>
+                <tbody>
+                  <tr>
+                    <th>ASB</th>
+                    <th>Burglary</th>
+                    <th>Robbery</th>
+                    <th>Vehicle</th>
+                    <th>Violent</th>
+                    <th>Shoplifting</th>
+                    <th>CD&A</th>
+                    <th>Other Theft</th>
+                    <th>Drugs</th>
+                    <th>Bike Theft</th>
+                    <th>Theft From Person</th>
+                    <th>Weapons</th>
+                    <th>Public Order</th>
+                    <th>Other</th>
+                    <th>Total</th>
+                  </tr>
+                  <tr>
+                    <td>24</td>
+                    <td>6</td>
+                    <td>0</td>
+                    <td>15</td>
+                    <td>13</td>
+                    <td>9</td>
+                    <td>7</td>
+                    <td>18</td>
+                    <td>1</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>5</td>
+                    <td>0</td>
+                    <td>102</td>
+                  </tr>
+                </tbody>
               </table>
             </div>
 

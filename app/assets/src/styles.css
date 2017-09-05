@@ -287,9 +287,16 @@ button {
 }
 
 .crime-table table {
-    margin: 40px 0 20px;
+    margin: 60px 0 20px;
     border: 1px solid #e8e8e8;
     background: white;
+    padding: 10px 20px;
+}
+
+.crime-map img, .crime-table table {
+    border-top: 4px solid #3c6df0;
+    background-color: #fff;
+    box-shadow: 0 0 40px rgba(0,0,0,0.1);
 }
 
 .crime-table table tr {
@@ -308,5 +315,11 @@ button {
 .coal-image {
     width: 100%;
     height: 600px;
+}
+
+.coal-container {
+    border-top: 4px solid #3c6df0;
+    background-color: #fff;
+    box-shadow: 0 0 40px rgba(0,0,0,0.1);
 }
 
