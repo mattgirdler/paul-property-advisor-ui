@@ -12,8 +12,8 @@ export default class Conversation {
   ];
 
   @action
-  addStep(key, title, text, status) {
-    this.messages.push(new Step(key, title, text, status));
+  addStep(position, key, title, text, status) {
+    this.steps.splice(position, 0, new Step(key, title, text, status));
   }
 
   @action

@@ -66,8 +66,12 @@ class ChatForm extends React.Component {
 
             if(data.output.tab) {
                 this.tabs.setActiveTab(data.output.tab)
-            }
 
+                if(data.output.tab === 'CoalAuthority') {
+                    this.guide.addStep(2, 'CoalAuthority', 'Coal Authority', 'Within, or within 2 metres of, the boundry of the property there is 1 mine entry. You should request a Mine Entry Interpretive Report from the Coal Authority before you proceed.', 'warning')
+                }
+            }
+            
             if (data.output.update) {
                 this.guide.updateStep(data.output.update.key, data.output.update.value, data.output.update.status)
             }
