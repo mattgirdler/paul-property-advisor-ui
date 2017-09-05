@@ -15,7 +15,7 @@ h1, h2, h3, h4, h5, h6, p, a, .header {
 
 h2 {
   font-family: $font-stack;
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 300;
 }
 
@@ -23,8 +23,11 @@ input {
   font-size: 0.9rem;
 
   &[type="text"] {
-    margin-bottom: 1rem;
-    margin-left: 1rem;
+    margin-bottom: 1.5rem;
+    margin-left: 2rem;
+    border-right: none;
+    width: 75%;
+    padding-left: 1.5rem;
   }
 
   &:focus {
@@ -39,7 +42,9 @@ button {
 
   &[type="submit"] {
     height: 49px;
+    border-left: none;
   }
+
 
 }
 
@@ -54,9 +59,26 @@ button {
 
 
 .panel {
+      padding-top: 1rem;
+      padding-left: 3rem;
+
   p {
     font-size: 0.9rem;
     padding-top: 0;
     padding-bottom: 0.5rem;
   }
+}
+
+.scroll-pane {
+  padding-top: 3rem;
+
+  small {
+    font-size: 0.9rem;
+    color: grey;
+    font-style: italic;
+  }
+}
+
+.header {
+  padding-left: 3rem;
 }
