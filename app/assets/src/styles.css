@@ -316,11 +316,16 @@ form.loading:before {
 .crime-map, .crime-table {
     display: flex;
     justify-content: center;
+    border-top: 4px solid #3c6df0;
+    background-color: #fff;
+    box-shadow: 0 0 40px rgba(0,0,0,0.1);
+}
+
+.crime-map {
+    margin-top: 60px;
 }
 
 .crime-map img {
-    border: 1px solid #e8e8e8;
-    margin-top: 60px;
     padding: 40px;
     background: white;
 }
@@ -332,10 +337,9 @@ form.loading:before {
     padding: 10px 20px;
 }
 
-.crime-map img, .crime-table table {
-    border-top: 4px solid #3c6df0;
-    background-color: #fff;
-    box-shadow: 0 0 40px rgba(0,0,0,0.1);
+.crime-table {
+    flex-direction: column;
+    padding: 30px;
 }
 
 .crime-table table tr {
@@ -353,11 +357,12 @@ form.loading:before {
 
 .coal-image {
     width: 100%;
-    height: 600px;
+    padding-bottom: 30px;
 }
 
 .coal-container {
     border-top: 4px solid #3c6df0;
     background-color: #fff;
     box-shadow: 0 0 40px rgba(0,0,0,0.1);
+    padding: 50px 60px;
 }

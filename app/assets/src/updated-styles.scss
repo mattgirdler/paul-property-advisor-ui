@@ -28,9 +28,9 @@ input {
 
   &[type="text"] {
     margin-bottom: 1.5rem;
-    margin-left: 2rem;
+    margin-left: 15px;
     border-right: none;
-    width: 75%;
+    width: calc(100% - 80px);
     padding-left: 1.5rem;
   }
 
