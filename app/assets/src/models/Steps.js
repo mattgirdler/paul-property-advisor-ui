@@ -1,6 +1,6 @@
 import { observable } from "mobx";
 
-export default class MessageModel {
+export default class Steps {
   @observable title;
   @observable text;
   
