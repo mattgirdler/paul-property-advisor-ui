@@ -1,28 +1,38 @@
 const express = require('express')
+const bodyParser = require('body-parser')
 const path = require('path')
 const cfenv = require('cfenv')
 const app = express()
 
+const config = require('./config')
+
 const ConversationV1 = require('watson-developer-cloud/conversation/v1')
+
+app.use(bodyParser.json())
 
 var appEnv = cfenv.getAppEnv()
 
+var context = {}
+
 var conversation = new ConversationV1({
-  username: 'a670affb-7c3d-4c7f-b9cc-d83d430673d6',
-  password: 'LXxVSN4uPNOZ',
+  username: config.username,
+  password: config.password,
   version_date: ConversationV1.VERSION_DATE_2017_05_26
 })
 
-// Example conversation use
-conversation.message({
-  input: { text: 'Hello' },
-  workspace_id: '26a6e7d0-4127-4be4-bf44-2355001a6a38'
-}, function(err, response) {
-  if (err) {
-    console.error(err);
-  } else {
-    console.log(response.output.text[0]);
-  }
+app.post('/api/question', function(req, res) {
+  conversation.message({
+    input: { text: req.body.question },
+    workspace_id: '26a6e7d0-4127-4be4-bf44-2355001a6a38',
+    context: context
+  }, (err, response) => {
+    if (err) {
+      res.sendStatus(500)
+    } else {
+      context = response.context
+      res.send(response);
+    }
+  })
 })
 
 app.use('/static', express.static('app/assets/dist'))
