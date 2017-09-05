@@ -11,6 +11,14 @@ class ChatForm extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
         this.store = props.store
         this.tabs = props.tabs
+
+        window.speechSynthesis.onvoiceschanged = () => {
+            var synth = window.speechSynthesis;
+            this.voices = synth.getVoices();
+            this.su = new SpeechSynthesisUtterance()
+            this.su.lang = "en";
+            this.su.voice = this.voices[0];
+        };
     }
 
     render() {
@@ -48,6 +56,9 @@ class ChatForm extends React.Component {
         })
         .then(function(data) {
             this.store.addMessage(data.output.text[0], true)
+
+            this.su.text = data.output.text[0];
+            window.speechSynthesis.speak(this.su);
 
             if(data.output.tab) {
                 this.tabs.setActiveTab(data.output.tab)
