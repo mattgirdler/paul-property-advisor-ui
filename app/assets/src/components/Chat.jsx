@@ -6,29 +6,22 @@ import Message from './Message';
 
 @observer
 class Chat extends React.Component {
-  @observable newMessage = "";
-
   render() {
     return (
+      <div ref="scrollpane" className="scroll-pane">
+        <p><small><center>Conversation started 4 Sept, 13:03</center></small></p>
         <ul className="Chat">
           {this.props.store.messages.map(m => (
-            <Message message={m}/>
+            <Message message={m} key={Math.random()}/>
           ))}
         </ul>
+      </div>
     );
   }
 
-  @action
-  handleMessage = e => {
-    this.newMessage = e.target.value;
-  };
-
-  @action
-  handleFormSubmit = e => {
-    this.props.store.addMessage(this.newMessage, false);
-    this.newMessage = "";
-    e.preventDefault();
-  };
+  componentDidUpdate() {
+    this.refs.scrollpane.scrollTop = this.refs.scrollpane.scrollHeight;
+  }
 }
 
 export default Chat;
