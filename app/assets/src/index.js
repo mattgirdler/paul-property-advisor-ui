@@ -1,7 +1,7 @@
 import React from "react";
 import { render } from "react-dom";
 import DevTools from "mobx-react-devtools";
-import Guide from './components/Guide'
+import GuidePane from './components/GuidePane'
 import Traffic from './components/Traffic'
 
 import Chat from './components/Chat';
@@ -12,9 +12,11 @@ import TabNav from './components/TabNav'
 import TabPane from './components/TabPane'
 
 import Tabs from "./models/Tabs";
+import Guide from './models/Guide';
 
 const store = new Conversation();
 const tabs = new Tabs();
+const guide = new Guide();
 
 render(
   <div className="wrapper">
@@ -108,7 +110,10 @@ render(
               <p>For further information or help, please contact your professional adviser or Landmark Customer Services on 0844 844 9966.</p>
             </div>
           </TabPane>
-          <TabPane id="guide" tabs={tabs}>
+          
+          <GuidePane tabs={tabs} guide={guide}/>
+
+          {/* <TabPane id="guide" tabs={tabs}>
             <div className="panel panel--complete">
               <h2>Choose your property</h2>
               <p>21 Cotham Lawn Road, Bristol</p>
@@ -138,13 +143,13 @@ render(
               <h2>Move In</h2>
               <p>Not complete</p>
             </div>
-          </TabPane>
+          </TabPane> */}
 
           <TabPane id="CoalAuthority" tabs={tabs}>
-          <img src="./images/Coal.jpg" alt="Coal Mining Map" className="coal-image"/>
-          <p>Within, or within 2 metres of, the boundry of the property there is 1 mine entry, the approximate position of which is shown on the enquiry boundry plot.</p>
-          <p>There is no record of what steps, if any, have taken to treat the mine entry.</p>
-          <p>For an additional fee, the Coal Authority can provide a Mine Entry Interpretive Report.</p>
+            <img src="./images/Coal.jpg" alt="Coal Mining Map" className="coal-image" />
+            <p>Within, or within 2 metres of, the boundry of the property there is 1 mine entry, the approximate position of which is shown on the enquiry boundry plot.</p>
+            <p>There is no record of what steps, if any, have taken to treat the mine entry.</p>
+            <p>For an additional fee, the Coal Authority can provide a Mine Entry Interpretive Report.</p>
           </TabPane>
 
           <TabPane id="Crime" tabs={tabs}>
@@ -198,7 +203,7 @@ render(
         </div>
 
         <div className="faux-table__cell faux-table__cell--side chat__cell">
-          <Chat store={store}/>
+          <Chat store={store} />
         </div>
       </div>
 
