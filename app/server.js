@@ -24,7 +24,7 @@ app.post('/api/question', function(req, res) {
   console.log(req)
   conversation.message({
     input: { text: req.body.question },
-    workspace_id: '26a6e7d0-4127-4be4-bf44-2355001a6a38',
+    workspace_id: '7aea4577-7e09-4262-9758-302b66d4df5a',
     context: context
   }, (err, response) => {
     if (err) {

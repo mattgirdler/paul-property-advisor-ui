@@ -4,5 +4,5 @@ applications:
   instances: 1
   domain: eu-gb.mybluemix.net
   name: paul
-  host: paul
+  host: lr-paul
   disk_quota: 256M
