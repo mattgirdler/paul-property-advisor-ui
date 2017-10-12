@@ -7,18 +7,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/andymantell/property-advisor-ui.git"
+    "url": "git+https://github.com/LandRegistry/paul-property-advisor-ui.git"
   },
   "author": "",
   "devDependencies": {
-    "babel-core": "^6.9.1",
-    "babel-loader": "^7.1.2",
-    "babel-plugin-transform-decorators-legacy": "^1.3.4",
-    "babel-preset-es2015": "^6.9.0",
-    "babel-preset-react": "^6.5.0",
-    "babel-preset-stage-1": "^6.5.0",
-    "webpack": "^3.5.5",
-    "webpack-dev-server": "^2.7.1"
+
   },
   "dependencies": {
     "body-parser": "^1.17.2",
@@ -31,6 +24,14 @@
     "react": "^15.1.0",
     "react-bootstrap": "^0.31.2",
     "react-dom": "^15.1.0",
-    "watson-developer-cloud": "^2.39.0"
+    "watson-developer-cloud": "^2.39.0",
+    "babel-core": "^6.9.1",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-stage-1": "^6.5.0",
+    "webpack": "^3.5.5",
+    "webpack-dev-server": "^2.7.1"
   }
 }
