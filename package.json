@@ -7,7 +7,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/andymantell/property-advisor-ui.git"
+    "url": "git+https://github.com/LandRegistry/paul-property-advisor-ui.git"
   },
   "author": "",
   "devDependencies": {

@@ -17,6 +17,7 @@ var context = {}
 var conversation = new ConversationV1({
   username: config.username,
   password: config.password,
+  path: { workspace_id: 'f6666f62-20ac-4fa0-a190-4c911d9bd6c6' },
   version_date: ConversationV1.VERSION_DATE_2017_05_26
 })
 
@@ -24,7 +25,6 @@ app.post('/api/question', function(req, res) {
   console.log(req)
   conversation.message({
     input: { text: req.body.question },
-    workspace_id: '7aea4577-7e09-4262-9758-302b66d4df5a',
     context: context
   }, (err, response) => {
     if (err) {

@@ -3,6 +3,6 @@ applications:
   memory: 256M
   instances: 1
   domain: eu-gb.mybluemix.net
-  name: paul
-  host: lr-paul
+  name: PaulPropertyAdvisorUI
+  host: hmlr-ds-paul-property-advisor-ui
   disk_quota: 256M
