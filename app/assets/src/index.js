@@ -151,6 +151,55 @@ render(
           </div>
           </TabPane>
 
+        <TabPane id="KnotweedInfo" tabs={tabs}>
+          <div className="coal-container">
+          <img src="./images/Knotweed.jpg" alt="Knotweed Image" className="coal-image"/>
+          <p>Contact Natural England. Information available here:
+            <a href= 'https://www.gov.uk/guidance/prevent-the-spread-of-harmful-invasive-and-non-native-plants'> https://www.gov.uk/guidance/prevent-the-spread-of-harmful-invasive-and-non-native-plants</a>
+            </p>
+          </div>
+        </TabPane>
+          <TabPane id="Title" tabs={tabs}>
+            <div className="coal-container">
+            <img src="./images/Title.jpg" alt="Title Image" className="coal-image"/>
+
+
+            <p>The boundary of the property can be found on the image above. If you want to order a high quality image
+            request <a href='#'> here </a>
+            </p>
+            </div>
+          </TabPane>
+          <TabPane id="Trees" tabs={tabs}>
+            <div className="coal-container">
+            <img src="./images/Trees.jpg" alt="Tree Image" className="coal-image"/>
+            <p>Try viewing the property with Google Maps, there is a marker on the map directing you to the property. If there are overhanging trees you can contact a tree surgeon to
+find out about the roots. There maybe a cost associated with tree surgeon only.
+              </p>
+            </div>
+            </TabPane>
+
+
+              <TabPane id="View" tabs={tabs}>
+                <div className="coal-container">
+                <img src="./images/View.jpg" alt="View Image" className="coal-image"/>
+                <p>Here is the front of the property, according to Google maps streetview
+                  </p>
+                </div>
+                </TabPane>
+
+                <TabPane id="Garden" tabs={tabs}>
+                  <div className="coal-container">
+                  <img src="./images/Garden.jpg" alt="Garden Image" className="coal-image"/>
+                  <p>Here is an image of the garden associated to the property.  </p>
+                  </div>
+                  </TabPane>
+                  <TabPane id="Development" tabs={tabs}>
+                    <div className="coal-container">
+                    <img src="./images/Development.jpg" alt="Development Image" className="coal-image"/>
+                    <p>Here is a map of the local development in the area
+                      </p>
+                    </div>
+                    </TabPane>
           <TabPane id="Crime" tabs={tabs}>
             <div className="crime-table">
               <h2>June 2017 crime and ASB breakdowns and trends for Cotham</h2>
@@ -222,7 +271,13 @@ render(
           <ul className="tabs">
             <TabNav id="guide" title="Guide" tabs={tabs} />
             <TabNav id="traffic" title="Risk" tabs={tabs} />
-            <TabNav id="CoalAuthority" title="CoalAuthority" tabs={tabs} />
+            <TabNav id="CoalAuthority" title="Coal" tabs={tabs} />
+            <TabNav id="KnotweedInfo" title="Knotweed" tabs={tabs} />
+            <TabNav id="Trees" title="Trees" tabs={tabs} />
+            <TabNav id="Title" title="Boundary" tabs={tabs} />
+            <TabNav id="View" title="View" tabs={tabs} />
+            <TabNav id="Garden" title="Garden" tabs={tabs} />
+            <TabNav id="Development" title="Development" tabs={tabs} />
             <TabNav id="Crime" title="Crime" tabs={tabs} />
           </ul>
         </div>

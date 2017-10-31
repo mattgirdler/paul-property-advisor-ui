@@ -17,7 +17,7 @@ var context = {}
 var conversation = new ConversationV1({
   username: config.username,
   password: config.password,
-  path: { workspace_id: 'f6666f62-20ac-4fa0-a190-4c911d9bd6c6' },
+  path: { workspace_id: 'b7667d9f-5c21-4f40-8391-b7b519a6db0c' },
   version_date: ConversationV1.VERSION_DATE_2017_05_26
 })
 

@@ -18,6 +18,9 @@ h1, h2, h3, h4, h5, h6 {
 .visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
 
 /* Layout */
+.root {
+  max-height: 100vh;
+}
 .wrapper {
     height: 100%;
     padding-top: 80px;
@@ -29,18 +32,23 @@ h1, h2, h3, h4, h5, h6 {
     table-layout: fixed;
     width: 100%;
     height: 100%;
+
 }
 
 .faux-table__row {
+    height: 80%;
     display: table-row;
 }
 
 .faux-table__cell {
     display: table-cell;
+
 }
 
 .faux-table__cell--main {
     width: 66%;
+    height: 78vh;
+    overflow-y: auto;
     background: #f5f5f5;
     position: relative;
 }
@@ -51,7 +59,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .faux-table__cell--side {
-    width: 33%
+    width: 33%;
+
 }
 
 .faux-table__cell--shrink-height {
@@ -72,6 +81,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .chat__cell {
     vertical-align: top;
+    height: 78vh;
+    overflow-y: auto;
 }
 
 /* Header */
@@ -369,7 +380,19 @@ form.loading:before {
     width: 100%;
     padding-bottom: 30px;
 }
+#map {
+       height: 400px;
+       width: 100%;
+      }
 
+.scroll-pane {
+  padding-top: 3rem; }
+  .scroll-pane small {
+    font-size: 0.9rem;
+    color: grey;
+    font-style: italic;
+    overflow: scroll;
+  }
 .coal-container {
     border-top: 4px solid #3c6df0;
     background-color: #fff;

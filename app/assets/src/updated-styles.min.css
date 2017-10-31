@@ -69,7 +69,9 @@ button[type="submit"] {
   .scroll-pane small {
     font-size: 0.9rem;
     color: grey;
-    font-style: italic; }
+    font-style: italic;
+    overflow: scroll;
+  }
 
 .header {
   padding-left: 3rem; }
