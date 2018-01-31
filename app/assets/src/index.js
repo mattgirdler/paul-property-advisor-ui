@@ -144,7 +144,7 @@ render(
 
           <TabPane id="CoalAuthority" tabs={tabs}>
           <div className="coal-container">
-          <img src="./images/Coal.jpg" alt="Coal Mining Map" className="coal-image"/>
+          <img src="./images/Coal.png" alt="Coal Mining Map" className="coal-image"/>
           <p>Within, or within 2 metres of, the boundry of the property there is 1 mine entry, the approximate position of which is shown on the enquiry boundry plot.</p>
           <p>There is no record of what steps, if any, have taken to treat the mine entry.</p>
           <p>For an additional fee, the Coal Authority can provide a Mine Entry Interpretive Report.</p>
@@ -195,7 +195,7 @@ find out about the roots. There maybe a cost associated with tree surgeon only.
                   </TabPane>
                   <TabPane id="Development" tabs={tabs}>
                     <div className="coal-container">
-                    <img src="./images/Development.jpg" alt="Development Image" className="coal-image"/>
+                    <img src="./images/Development.png" alt="Development Image" className="coal-image"/>
                     <p>Here is a map of the local development in the area
                       </p>
                     </div>
