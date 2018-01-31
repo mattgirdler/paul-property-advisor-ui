@@ -202,7 +202,7 @@ find out about the roots. There maybe a cost associated with tree surgeon only.
                     </TabPane>
           <TabPane id="Crime" tabs={tabs}>
             <div className="crime-table">
-              <h2>June 2017 crime and ASB breakdowns and trends for Cotham</h2>
+              <h2>June 2017 crime and ASB breakdowns and trends for Digital Street</h2>
 
               <div className="crime-tables">
                 <table>
