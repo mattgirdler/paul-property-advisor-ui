@@ -10,8 +10,8 @@ class TabNav extends React.Component {
         this.handleClick = this.handleClick.bind(this);
         this.tabs = props.tabs
     }
-    
-    
+
+
     render() {
         const { title, id, children, visible } = this.props;
 
